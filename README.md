@@ -1,0 +1,1 @@
+A simple web application that allows users to put down their thoughts.
