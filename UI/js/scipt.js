@@ -7,7 +7,8 @@ const reg = document.getElementById("reg");
 const modal = document.querySelector(".modal");
 const closeButton = document.querySelector(".close-button");
 
-const toggleModal = () => {
+const toggleModal = (e) => {
+        e.preventDefault();
         modal.classList.toggle("show-modal");
     }
 const toggleForms = () => {
@@ -20,8 +21,14 @@ function windowOnClick(event) {
         }
     }
 
-trigger.addEventListener("click", toggleModal);
-closeButton.addEventListener("click", toggleModal);
+if (trigger) {
+    trigger.addEventListener("click", toggleModal);
+}
+if (closeButton) {
+    closeButton.addEventListener("click", toggleModal);
+}   
+
 login.addEventListener("click", toggleForms);
 reg.addEventListener("click", toggleForms);
 window.addEventListener("click", windowOnClick);
+
