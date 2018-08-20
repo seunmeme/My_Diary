@@ -10,29 +10,75 @@ body {
 /* Header */
 header {
     display: flex;
-    justify-content: flex-start;
-    padding-left: 15px;
+    align-items: center;
     height: 10%;
     background-color: #888690;
     border-bottom: solid 5px #ebd9c3;
     color: #f2f1f6;
+    
 }
-header .highlight{
+header .highlight, .active a{
     color: rgb(240, 199, 149);
     font-weight: bold;
     }
+header h1 {
+    display: flex;
+    width: 40%;
+    padding-left: 3%;
+}
+header nav {
+    display: flex;
+    width: 60%;
+    padding-right: 3%;
+    justify-content: flex-end;   
+}
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+header nav ul li {
+    padding-left: 15px;
+    color: #f2f1f6;
+}
+li a {
+    text-decoration: none;
+    color: #f2f1f6;
+    font-size: 17px
+}
+header a:hover{
+    color: #c7c2c1;
+    font-weight: bold;
+    font-size: 18px
+}
+/* Section */
 section {
+    width: auto;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+span.edit {
+    padding-left: 15px;
+}
+.entry {
+    background-color: #888690;
+    color: #f2f1f6;
+    padding: 5px;
+    border-radius: 10px 0;
+    /* width: 90%; */
+}
+#showcase {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 200px;
     min-height: 600px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 3%;
+    padding-right: 3%;
     background: url(../images/diary1.jpg);
     background-size: cover;
 }
-section h2 {
+section #showcase h2 {
     text-align: center;
 }
 
@@ -53,6 +99,10 @@ button#begin {
 form {
     display: flex;
     flex-direction: row;
+}
+form .diaryEntry{
+    display: flex;
+    flex-direction: column;
 }
 .fields {
     display: flex;
@@ -107,7 +157,7 @@ button {
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 1rem 1.5rem;
-    width: 24rem;
+    width: 22rem;
     border-radius: 0.5rem;
 }
 .close-button {
@@ -141,7 +191,30 @@ footer {
     right: 0;
     left: 0; 
 }
-
+@media(max-width: 600px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+    header h1 {
+        display: center;
+        justify-content: center;
+        width:100%;
+        padding: none;
+    }
+    header nav {
+        display: flex;
+        justify-content: center;
+        width:100%;
+        padding: none;
+        margin-bottom: 10px
+    }
+    header a:hover{
+        color: #c7c2c1;
+        font-weight: bold;
+        font-size: 18px
+    }
+}
 @media(max-width: 1024px) {
     footer {
         display: flex;
@@ -152,7 +225,7 @@ footer {
         color: #f2f1f6;
         
     }  
-    section {
+    #showcase {
         display: flex;
         align-items: flex-start;
         min-height: 1230px;

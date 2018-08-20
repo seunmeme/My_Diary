@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>My Diary | Diary Entries</title>
+</head>
+<body>
+  <header>
+    <h1 href="index.html">My<span class="highlight ">Diary</span></h1>
+    <nav>
+      <ul>
+        <li><a href="profile.html">PROFILE</a></li> 
+        <li class="active"><a href="entries.html">DIARIES</a></li>
+        <li><a href="index.html">LOGOUT</a></li>  
+      </ul>
+    </nav> 
+  </header>
+
+  <section>
+    <h1>Diary Entries <span class = "add"><i class="fas fa-plus"></i></span></h1> 
+    <h2>Click on an entry to toggle its content</h2>
+    <div>
+      <h3 class="entry">My First diary entry</h3>
+      <p class="content">
+        Project management refers to directing and allocating available resources so as to be able to
+        meet requirements of a project within a stipulated time.
+        Project management refers to directing and allocating available resources so as to be able to
+        meet requirements of a project within a stipulated time.<span class="edit"><i class="fas fa-edit"></i></span>    
+      </p>
+    </div>
+    <div>
+      <h3 class="entry">My Second diary entry</h3>
+      <p class="content hide">
+        Project management refers to directing and allocating available resources so as to be able to
+        meet requirements of a project within a stipulated time.
+        Project management refers to directing and allocating available resources so as to be able to
+        meet requirements of a project within a stipulated time.<span class="edit"><i class="fas fa-edit"></i></span>    
+      </p>
+    </div>     
+    <div>
+        <h3 class="entry">My Third diary entry</h3>
+        <p class="content hide">
+            Project management refers to directing and allocating available resources so as to be able to
+            meet requirements of a project within a stipulated time.
+            Project management refers to directing and allocating available resources so as to be able to
+            meet requirements of a project within a stipulated time.<span class="edit"><i class="fas fa-edit"></i></span>    
+        </p>
+    </div> 
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h1>Edit entry</h1>
+        <form action="" method="post">
+                <div class="fields">
+                  <label>Title: </label> 
+                  <label>Content:</label>  
+                </div>
+                <div class="inputs">
+                  <input placeholder="Enter title" required>      
+                  <input type="textarea" placeholder="Enter content here" required> 
+                </div>  
+              </form>
+              <div class="buttons">
+                  <input type="submit" value="Save">                
+              </div> 
+              
+      </div>
+    </div>
+
+  </section>
+  
+ 
+   <script>
+      
+    //   const add = document.querySelector(add);
+      const edits = document.querySelectorAll(".edit");
+      const modal = document.querySelector(".modal");
+      const entries = document.querySelectorAll(".entry");
+      const closeButton = document.querySelector(".close-button");
+      
+
+      const toggleModal = (e) => {
+        e.preventDefault();
+        modal.classList.toggle("show-modal");
+    }
+      edits.forEach((edit) => {
+        edit.addEventListener('click', toggleModal)
+      });
+
+      entries.forEach((entry) => {
+        entry.addEventListener('click', (e) => {
+          e.target.nextElementSibling.classList.toggle('hide')
+        });
+      });
+
+      if (closeButton) {
+    closeButton.addEventListener("click", toggleModal);
+    } 
+    // if (add) {
+    //     add.addEventListener("click", toggleModal); 
+    // }
+  </script>
+  
+</body>
+</html>
