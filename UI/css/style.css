@@ -53,9 +53,31 @@ header a:hover{
 }
 /* Section */
 section {
+    display: flex;
+    flex-direction: row;
     width: auto;
     padding-left: 3%;
     padding-right: 3%;
+}
+#main {
+    width: auto
+}
+#aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    margin-left: 30px;
+    color: #f2f1f6;
+    background-color: #888690;
+    margin-top: 35px;
+    padding: 10px 5px;
+    border-radius: 10px;
+}
+#aside h1 {
+    margin: 0;
+    padding:0;
+    text-align: center
 }
 span.edit {
     padding-left: 15px;
@@ -129,6 +151,7 @@ form .diaryEntry{
     display: flex;
     flex-direction: row;
     margin-left: 30%;
+    margin-top: 10px;
 }
 button {
     margin-left: 5px;
@@ -138,7 +161,7 @@ button {
     display: none;
 }
 
-.modal {
+.modal, .addEntry {
     position: fixed;
     left: 0;
     top: 0;
@@ -191,7 +214,7 @@ footer {
     right: 0;
     left: 0; 
 }
-@media(max-width: 600px) {
+@media(max-width: 700px) {
     header {
         display: flex;
         flex-direction: column;
@@ -214,6 +237,16 @@ footer {
         font-weight: bold;
         font-size: 18px
     }
+    section {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
 }
 @media(max-width: 1024px) {
     footer {

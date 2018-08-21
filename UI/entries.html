@@ -21,7 +21,8 @@
   </header>
 
   <section>
-    <h1>Diary Entries <span class = "add"><i class="fas fa-plus"></i></span></h1> 
+    <div id="main">
+    <h1>Diary Entries</h1> 
     <h2>Click on an entry to toggle its content</h2>
     <div>
       <h3 class="entry">My First diary entry</h3>
@@ -70,23 +71,40 @@
               
       </div>
     </div>
+  </div>
+    <div id="aside">
+      
+        <h1>Add an entry</h1>
+        <form action="" method="post">
+                <div class="fields">
+                  <label>Title: </label> 
+                  <label>Content:</label>  
+                </div>
+                <div class="inputs">
+                  <input placeholder="Enter title" required>      
+                  <textarea name="" id="" cols="30" rows="10"></textarea> 
+                </div>  
+              </form>
+              <!-- <div class="buttons"> -->
+                  <input type="submit" value="Save">                
+              <!-- </div>  -->
+    </div>
+
 
   </section>
   
  
    <script>
-      
-    //   const add = document.querySelector(add);
       const edits = document.querySelectorAll(".edit");
       const modal = document.querySelector(".modal");
       const entries = document.querySelectorAll(".entry");
       const closeButton = document.querySelector(".close-button");
       
-
       const toggleModal = (e) => {
         e.preventDefault();
         modal.classList.toggle("show-modal");
-    }
+      }
+
       edits.forEach((edit) => {
         edit.addEventListener('click', toggleModal)
       });
@@ -100,9 +118,7 @@
       if (closeButton) {
     closeButton.addEventListener("click", toggleModal);
     } 
-    // if (add) {
-    //     add.addEventListener("click", toggleModal); 
-    // }
+
   </script>
   
 </body>
