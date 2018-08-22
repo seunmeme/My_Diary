@@ -1,0 +1,27 @@
+{
+  "name": "my_diary",
+  "version": "1.0.0",
+  "description": "A simple web application that allows users to put down their thoughts.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seunmeme/My_Diary.git"
+  },
+  "keywords": [],
+  "author": "Solomon Odewale",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seunmeme/My_Diary/issues"
+  },
+  "homepage": "https://github.com/seunmeme/My_Diary#readme",
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0"
+  }
+}
