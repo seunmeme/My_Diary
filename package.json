@@ -1,7 +1,7 @@
 {
   "name": "my_diary",
   "version": "1.0.0",
-  "description": "A simple web application that allows users to put down their thoughts.",
+  "description": "API for My_Diary application",
   "main": "app.js",
   "scripts": {
     "preinstall": "npm i -S babel-cli babel-preset-es2015 babel-preset-stage-2",
@@ -10,11 +10,17 @@
     "start": "npm run build && node dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "9.3.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/seunmeme/My_Diary.git"
   },
-  "keywords": ["node", "Diary"],
+  "keywords": [
+    "node",
+    "Diary"
+  ],
   "author": "Solomon Odewale",
   "license": "MIT",
   "bugs": {
@@ -31,5 +37,10 @@
     "eslint-plugin-jsx-a11y": "~6.1.1",
     "eslint-plugin-react": "~7.11.0",
     "nodemon": "~1.18.3"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.3",
+    "express": "~4.16.3",
+    "morgan": "~1.9.0"
   }
 }
